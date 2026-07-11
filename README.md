@@ -237,6 +237,7 @@ The primary requirement asks "which repositories each user has access to" (user-
 
 The `@octokit/plugin-throttling` handles both primary rate limits (5000 req/hour for PATs) and secondary/abuse rate limits automatically with exponential backoff. This means the service gracefully handles large organizations without manual retry logic.
 
+
 ## Scale Considerations
 
 | Concern | Solution |
@@ -247,6 +248,3 @@ The `@octokit/plugin-throttling` handles both primary rate limits (5000 req/hour
 | Concurrency | Capped at 10 (configurable) to avoid secondary limits |
 | Partial failures | `Promise.allSettled` for resilience |
 
-## License
-
-MIT
