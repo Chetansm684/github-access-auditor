@@ -2,6 +2,21 @@
 
 A Node.js service that connects to GitHub and generates a structured report showing which users have access to which repositories within a given organization.
 
+## Table of Contents
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Quick Start](#quick-start)
+  - [1. Clone the repository](#1-clone-the-repository)
+  - [2. Install dependencies](#2-install-dependencies)
+  - [3. Configure authentication](#3-configure-authentication)
+  - [4. Start the server](#4-start-the-server)
+- [API Endpoints](#api-endpoints)
+- [Configuration](#configuration)
+- [Architecture](#architecture)
+- [Design Decisions](#design-decisions)
+- [Scale Considerations](#scale-considerations)
+- [License](#license)
+
 ## Features
 
 - **Authenticate with GitHub** using a Personal Access Token (PAT)
@@ -28,8 +43,8 @@ A Node.js service that connects to GitHub and generates a structured report show
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/GitAuth.git
-cd GitAuth
+git clone https://github.com/Chetansm684/github-access-auditor.git
+cd github-access-auditor
 ```
 
 ### 2. Install dependencies
