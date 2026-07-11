@@ -96,6 +96,16 @@ You should see:
 └──────────────────────────────────────────────┘
 ```
 
+### 5. Test the API
+
+Now that the server is running, open a **new terminal window** and run this command to generate a report for your organization:
+
+```bash
+curl "http://localhost:3000/api/report?org=your-organization-name"
+```
+
+Alternatively, you can just open `http://localhost:3000/api/report?org=your-organization-name` in your web browser!
+
 ## API Endpoints
 
 ### `GET /api/report?org=<organization>`
