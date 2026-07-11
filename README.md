@@ -15,9 +15,13 @@ A Node.js service that connects to GitHub and generates a structured report show
 ## Prerequisites
 
 - **Node.js** v18 or higher
-- A **GitHub Personal Access Token** with the following scopes:
-  - `read:org` — read organization membership
-  - `repo` — read repository and collaborator data
+- A **GitHub Personal Access Token** (PAT). You can use either:
+  - **Fine-grained PAT (Recommended):**
+    - Repository access: *All repositories* (or select specific ones)
+    - Repository permissions: *Administration (Read-only)*
+    - Organization permissions: *Members (Read-only)*
+  - **Classic PAT:**
+    - Scopes: `repo` and `read:org`
 
 ## Quick Start
 
@@ -50,10 +54,14 @@ GITHUB_TOKEN=ghp_your_actual_token_here
 
 #### How to create a GitHub token
 
-1. Go to [GitHub Settings → Tokens](https://github.com/settings/tokens)
-2. Click **"Generate new token (classic)"**
-3. Select scopes: `read:org` and `repo`
-4. Copy the generated token into your `.env` file
+**For Fine-grained PATs (Recommended):**
+1. Go to [GitHub Settings → Fine-grained tokens](https://github.com/settings/tokens?type=beta)
+2. Click **"Generate new token"**
+3. Under **Resource owner**, select the organization
+4. Under **Repository access**, select **"All repositories"**
+5. Under **Repository permissions**, set **"Administration"** to **"Read-only"** *(Note: GitHub requires this specific permission to list repository collaborators)*
+6. Under **Organization permissions**, set **"Members"** to **"Read-only"**
+7. Copy the generated token into your `.env` file
 
 ### 4. Start the server
 
