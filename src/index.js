@@ -39,7 +39,7 @@ app.use((err, _req, res, _next) => {
 app.listen(config.port, () => {
   console.log(`
 ┌──────────────────────────────────────────────┐
-│  🔐 GitHub Access Report Service             │
+│  GitHub Access Report Service                │
 │                                              │
 │  Server:  http://localhost:${String(config.port).padEnd(5)}             │
 │  Report:  GET /api/report?org=<org_name>     │

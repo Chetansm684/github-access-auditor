@@ -31,9 +31,9 @@ export async function generateAccessReport(org) {
     }),
   ]);
 
-  console.log(`📦 Fetched ${repos.length} repositories for "${org}"`);
+  console.log(`Fetched ${repos.length} repositories for "${org}"`);
   if (orgMembers) {
-    console.log(`👥 Fetched ${orgMembers.length} organization members`);
+    console.log(`Fetched ${orgMembers.length} organization members`);
   }
 
   // --- Step 2: Fetch collaborators concurrently (with cap) ---
@@ -138,7 +138,7 @@ export async function generateAccessReport(org) {
   }
 
   console.log(
-    `✅ Report generated in ${elapsedMs}ms — ` +
+    `Report generated in ${elapsedMs}ms — ` +
       `${report.summary.totalRepositories} repos, ` +
       `${report.summary.totalUsers} users` +
       (errors.length > 0 ? `, ${errors.length} errors` : "")

@@ -34,7 +34,7 @@ router.get("/report", async (req, res, next) => {
       });
     }
 
-    console.log(`\n🔍 Generating access report for organization: "${org}"`);
+    console.log(`\nGenerating access report for organization: "${org}"`);
 
     const report = await generateAccessReport(org);
 
